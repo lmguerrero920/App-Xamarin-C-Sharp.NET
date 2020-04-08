@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Komodo1Model1StoreContainer" CdmEntityContainer="KomodoDeviceUsers1">
+    <EntitySetMapping Name="DeviceUsers">
+      <EntityTypeMapping TypeName="Komodo1Model1.DeviceUsers">
+        <MappingFragment StoreEntitySet="DeviceUsers">
+          <ScalarProperty Name="IdDeviceUsers" ColumnName="IdDeviceUsers" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

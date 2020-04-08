@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Komodo1ModelStoreContainer" CdmEntityContainer="Komodo1Entities">
+    <EntitySetMapping Name="TblUbications">
+      <EntityTypeMapping TypeName="Komodo1Model.TblUbication">
+        <MappingFragment StoreEntitySet="TblUbication">
+          <ScalarProperty Name="UbicationId" ColumnName="UbicationId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

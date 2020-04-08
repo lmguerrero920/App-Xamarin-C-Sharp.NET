@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Komodo.Views.QrReader">
+    <ContentPage.Content>
+        <ScrollView>
+        <Grid  HorizontalOptions="FillAndExpand" BackgroundColor="#" >
+            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"  />
+                    <RowDefinition  Height="2*" />
+                   
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackLayout>
+
+                    <Label x:Name="urllink" Text=""
+                           HorizontalTextAlignment="Center"></Label>
+                    
+                </StackLayout>
+
+                <StackLayout Grid.Row="1"
+                                 Grid.Column="0">
+
+                    <Button
+                        Margin="50,0"
+                           x:Name="BtnQr"
+                     Text="Lector QR"
+                        TextColor="White"
+                     
+                     BackgroundColor="Crimson"
+                        Clicked="BtnQr_Clicked"
+                        
+                        ></Button> 
+                    <Button
+                        Margin="50,0"
+                           x:Name="BtnUbications"
+                     Text="Ubicación"
+                        TextColor="White"
+                     
+                     BackgroundColor="Crimson"
+                        Clicked="BtnUbications_Clicked"
+                        
+                        ></Button>
+                      <Button
+                        Margin="50,0"
+                           x:Name="BtnCoordenadas"
+                     Text="Coordenadas"
+                        TextColor="White"
+                     
+                     BackgroundColor="Crimson"
+                      Clicked="BtnCoordenadas_Clicked"
+                  
+                        
+                        ></Button>
+
+                    <Button
+                        Margin="50,0"
+                           x:Name="BtnGoogleMaps"
+                     Text="Mapa por Coordenada"
+                        TextColor="White"
+                     
+                     BackgroundColor="Crimson"
+                      
+                  Clicked="BtnGoogleMaps_Clicked"
+                        
+                        ></Button>
+                    
+                        <Button
+                        Margin="50,0"
+                           x:Name="BtnPin1"
+                     Text="Mapa PIN1"
+                        TextColor="White"
+                     
+                     BackgroundColor="Crimson"
+                      
+                  Clicked="BtnPin1_Clicked"
+                        
+                        ></Button>
+
+                        <Button
+                        Margin="50,0"
+                           x:Name="BtnItems"
+                     Text="Lista Items API"
+                        TextColor="White"
+                     
+                     BackgroundColor="Crimson"
+                      
+                  Clicked="BtnItems_Clicked"
+                        
+                        ></Button>
+
+                    </StackLayout>
+
+
+
+            </Grid>
+        </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

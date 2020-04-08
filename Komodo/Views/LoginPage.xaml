@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BindingContext="{Binding Main,Source={StaticResource Locator}}"
+             x:Class="Komodo.Views.LoginPage">
+    <ContentPage.Content>
+        <ScrollView BindingContext="{Binding Login}">
+            <StackLayout  Padding="10,20,10,5" Spacing="0" BackgroundColor="White">
+                <Image
+           Source="komodo1"
+            WidthRequest="200"
+            Aspect="AspectFit"
+           />
+                <StackLayout Margin="0,30,10,20"   >
+                    <Grid Margin="0,20" VerticalOptions="CenterAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        
+
+                  <Label  FontSize="20" VerticalOptions="Center"
+                    Grid.Row="0" Grid.Column="0" Text="Usuario" 
+                      
+                    FontAttributes="Bold"
+                    />
+
+
+                        <Entry
+                      Text="{Binding Email,Mode=TwoWay}"
+                      Keyboard="Email"
+                            x:Name="Email"
+           Grid.Row="0"
+            Grid.Column="1"
+         
+            Placeholder="Ingrese usuario"
+                            />
+                       
+                      
+                        <Label  FontSize="20" VerticalOptions="Center"
+                   FontAttributes="Bold"    
+                   Grid.Row="1" Grid.Column="0" Text="Contraseña"/>
+
+
+                        <Entry 
+                            x:Name="Password"
+                            Text="{Binding Password,Mode=TwoWay}"
+             Grid.Column="1" Grid.Row="1"
+            IsPassword="True"
+            Placeholder="Ingrese su contraseña"
+             />
+                    </Grid>
+
+                    
+                </StackLayout>
+
+                <StackLayout
+                         
+                    Margin="80,0" Orientation="Horizontal" >
+
+                    <Label FontAttributes="Bold" Text="Recordar credenciales "
+          HorizontalOptions="StartAndExpand" VerticalOptions="Center"
+            FontSize="15"/>
+                    <Switch 
+                HorizontalOptions="Center" OnColor="Navy" 
+                        IsToggled="{Binding IsToggled,Mode=TwoWay}"
+                        />
+
+
+                </StackLayout>
+
+                <ActivityIndicator 
+                  VerticalOptions="CenterAndExpand" 
+                    IsRunning="{Binding IsRunning,Mode=TwoWay}"
+                    
+                  />
+
+                <StackLayout Margin="30,0" Orientation="Vertical"
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="CenterAndExpand"
+                             
+                             >
+                    <Button   x:Name="BtnIngresar"
+            CornerRadius="28" HeightRequest="46"
+            Text="Ingresar" HorizontalOptions="FillAndExpand"
+               BackgroundColor="Navy" TextColor="White"
+                        Command="{Binding LoginCommand}"
+                        IsEnabled="{Binding IsEnabled,Mode=TwoWay}"
+                              Clicked="BtnIngresar_Clicked"
+                      />
+                    
+                    <Button  x:Name="BtnRestablecer"
+            CornerRadius="28" HeightRequest="46"
+            Text="Restablecer" BackgroundColor="Purple"
+             HorizontalOptions="FillAndExpand" TextColor="White"
+          Command="{Binding RecoverPasswordCommand}"           
+           IsEnabled="{Binding IsEnabled,Mode=TwoWay}"
+             Clicked="BtnRestablecer_Clicked"
+                        
+                     />
+
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
